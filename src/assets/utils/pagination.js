@@ -6,13 +6,13 @@ const paginationLogic = (currentPage, residents) => {
   const sliceStart = sliceEnd - RESIDENTES_PER_PAGE;
   const residentsInCurrentPage = residents.slice(sliceStart, sliceEnd);
   const pages = []
-  for (let i = 0; i <= totalPages; i++) {
+  for (let i = 1; i <= totalPages; i++) {
     pages.push(i)
   }
 
   return {
     pages,
-    resi
+    residentsInCurrentPage
   }
 };
 export { paginationLogic };
